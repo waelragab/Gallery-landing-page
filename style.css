@@ -1,0 +1,135 @@
+@font-face{
+    font-family: muli;
+    src: url("fonts/Lato-Regular.ttf");
+}
+@font-face{
+    font-family: muliBold;
+    src: url("fonts/Lato-Bold.ttf");
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.container, .container-images{
+    width: 861px;
+    margin: 0 auto;
+}
+nav{
+    height: 100px;
+    padding-top: 20px;
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    font-family: "muli";
+    color: #2E3336;
+}
+nav ul li{
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+nav ul li:hover{
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-bottom: 2px;
+}
+.form-group{
+    display: flex;
+    flex-direction: row;
+    align-items: ;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.search{
+    width: 500px;
+    height: 50px;
+    border-bottom: 1px solid #D8D8D8;
+    font-family: "muli";
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search input{
+    border: none;
+    height: 50px;
+    width: 400px;
+    color: #9BAAB7;
+    padding-left: 10px;
+    outline: none;
+    font-size: 18px;
+}
+.search input::placeholder{
+    color: #9BAAB7;
+    width: 400px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.search i{
+    color: #9BAAB7;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.form-group button{
+    width: 179px;
+    height: 52px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #2E3336;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.6);
+}
+.form-group button:hover{
+    transform: scale(1.02);
+}
+.container-images{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 10px;
+}
+.image-container{
+    width: 275px;
+    height: 214px;
+    position: relative;
+
+}
+.image-container img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.image-container .hover{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 275px;
+    background-color: #132436b7;
+    font-family: "muliBold";
+    max-height: 0;
+    overflow: hidden;
+    transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.hover div{
+    margin-left: 10px;
+}
+.hover i{
+    padding-right: 10px;
+}
+.image-container:hover .hover{
+    display: flex;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    max-height: 100px;
+}
